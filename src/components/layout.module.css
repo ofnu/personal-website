@@ -1,0 +1,51 @@
+* {
+  font-family: "Monaco";
+  margin-left: "510px";
+  margin-right: "100px";
+}
+
+.nav-links {
+  width: "400px";
+  padding-top: "140px";
+  display: "fixed";
+  flex-direction: "column";
+  justify-content: "center";
+  align-items: "center";
+}
+
+.nav-link-text {
+  color: black;
+  margin-bottom: "40px";
+}
+
+.heading {
+  color: darkorange;
+}
+
+body {
+  background-image: url("../images/background.png");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+@media (max-width: 767px) {
+  body {
+    background-size: contain;
+    background-position: center top;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  body {
+    background-size: cover;
+    background-position: center center;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    background-size: cover;
+    background-position: center center;
+  }
+}
