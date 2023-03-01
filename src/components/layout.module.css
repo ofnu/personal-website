@@ -1,32 +1,40 @@
 * {
-  font-family: "Monaco";
-  margin-left: "510px";
-  margin-right: "100px";
+  font-family: 'Monaco', monospace, system-ui;
+  /* margin-left: 510px;
+  margin-right: 100px; */
 }
 
 .nav-links {
-  width: "400px";
-  padding-top: "140px";
-  display: "fixed";
-  flex-direction: "column";
-  justify-content: "center";
-  align-items: "center";
+  /* display: flex;
+  flex-direction: column; */
+  margin-top: 100px;
+  width: 120px;
+  padding: 15px;
+  margin-right: 10px;
 }
 
-.nav-link-text {
-  color: black;
-  margin-bottom: "40px";
+.nav-links a {
+  display: block;
+  color: white;
+  margin-bottom: 30px;
 }
+
+.nav-links a:hover::before {
+  content: "::";
+}
+
 
 .heading {
-  color: darkorange;
+  color: white;
 }
 
 body {
-  background-image: url("../images/background.png");
+  background-image: url(../images/marble2.png);
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
+
+  color: white;
 }
 
 @media (max-width: 767px) {

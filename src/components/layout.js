@@ -16,7 +16,7 @@ const Sidebar = () => {
     // flexDirection: "column",
     // justifyContent: "left",
     // alignItems: "center"}}>
-     <div className={{navLinks}}>
+     <div className={navLinks}>
       <Link to="/">Home</Link>
       <Link to="/aboutme">About</Link>
       <Link to="/experience">Experience</Link>
@@ -28,15 +28,16 @@ const Layout = ({ pageTitle, children }) => {
   return (
     <div style={{
       display: "flex",
-      justifyContent: "center",
-      alignItems: "top",
+      justifyContent: "center"
     }}>
-      <div style={{width: "200px"}}>
+      <div style={{
+        display: "flex",
+      }}>
         <Sidebar />
-      </div>
-      <div style={{ marginLeft: "50px",  paddingRight: "200px" }}>
-      <h1 className={heading}>{pageTitle}</h1>
-      {children}
+        <div style={{}}>
+          <h1 className={heading}>{pageTitle}</h1>
+          {children}
+        </div>
       </div>
     </div>
   )
