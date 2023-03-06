@@ -9,6 +9,7 @@ const IndexPage = () => {
     <Layout pageTitle="noahzoarski.net">
       <p1>Noah Zoarski - Purdue University Undergraduate - Cybersecurity Major</p1>
       <MyTerminal/>
+      <script>MyTerminal.inputText.focus();</script>
     </Layout>
   )
 }

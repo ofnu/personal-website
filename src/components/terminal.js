@@ -60,9 +60,11 @@ export default class MyTerminal extends Component {
   render () {
     return (
       <Terminal
-        commands={commands}
+        style={{ backgroundColor:'rgba(20,20,20,0.4 )', backdropFilter: 'blur(8px)', marginTop: '10px'}}
         welcomeMessage={'Welcome to the Noah\'s terminal!\nType \'help\' to see a list of commands.'}
         promptLabel={'noah@Purdue:~$'}
+        commands={commands}
+
       />
     )
   }
