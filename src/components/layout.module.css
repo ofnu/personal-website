@@ -1,42 +1,93 @@
+/* General styles and resets */
 * {
-  font-family: 'Monaco', monospace, system-ui;
-  /* margin-left: 510px;
-  margin-right: 100px; */
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
 }
-
-.nav-links {
-  /* display: flex;
-  flex-direction: column; */
-  margin-top: 100px;
-  width: 120px;
-  padding: 15px;
-  margin-right: 10px;
-}
-.nav-links a {
-  display: block;
-  color: white;
-  margin-bottom: 30px;
-}
-.nav-links a:hover::before {
-  content: "::";
-}
-
-
-.heading {
-  color: white;
-}
-
 
 body {
-  margin-right: 135px;
+  margin: 0px;
   background-image: url(../images/marble3.png);
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
-
   color: white;
 }
 
+/* Navigation Bar */
+.navLinks {
+  width: autopx;
+  padding: 15px;
+  margin-left: 30px;
+  margin-right: 10px;
+}
+
+.navLinks a {
+  display: block;
+  color: white;
+  margin-bottom: 30px;
+  position: relative;
+  padding-right: 10px;
+}
+
+.navLinks a::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: -18px;
+}
+
+.navLinks a:hover::before {
+  content: "$";
+}
+
+/* Page headings */
+.heading {
+  color: white;
+}
+
+/* Social Media Buttons */
+.socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 15px;
+  margin-right: 10px;
+  margin-top: 70px;
+}
+
+.socials a {
+  margin-right: 15px;
+}
+
+.socials img {
+  width: 24px;
+  height: 24px;
+}
+
+.socials img:hover {
+  filter: brightness(70%);
+}
+
+/* Page-specific styles */
+.about-me-page {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;  /* adjust as needed */
+  justify-items: center; /* centers each box */
+  align-items: start; /* aligns boxes to the top */
+}
+
+.textbox:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+
+
+.section-style {
+  backdrop-filter: blur(10px);
+}
+
+/* Media queries */
 @media (max-width: 767px) {
   body {
     background-size: contain;

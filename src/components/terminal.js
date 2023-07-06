@@ -64,7 +64,6 @@ export default class MyTerminal extends Component {
         welcomeMessage={'Welcome to the Noah\'s terminal!\nType \'help\' to see a list of commands.'}
         promptLabel={'noah@Purdue:~$'}
         commands={commands}
-
       />
     )
   }

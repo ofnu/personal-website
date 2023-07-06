@@ -5,17 +5,32 @@ import {
   heading,
   navLinks,
   navLinkItem,
-  navLinkText
+  navLinkText,
+  socials
 } from './layout.module.css'
+import LinkedInLogo from '../images/linkedin-original.svg'
+import GithubLogo from '../images/github.svg'
+import HTBLogo from '../images/hack-the-box.png'
+
+const Socials = () => {
+  return (
+     <div className={socials}>
+      <a href="https://www.linkedin.com/in/noah-zoarski" target="_blank" rel="noreferrer">
+        <img src={LinkedInLogo} alt="LinkedIn"/>
+      </a>
+      <a href="https://github.com/ofnu" target="_blank" rel="noreferrer">
+        <img src={GithubLogo} alt="GitHub"/>
+      </a>
+      <a href="https://app.hackthebox.com/profile/patagonia" target="_blank" rel="noreferrer">
+        <img src={HTBLogo} alt="HackTheBox"/>
+      </a>
+    </div>
+  )
+}
+
 
 const Sidebar = () => {
   return (
-    // <div style={{ width: "400px",
-    // paddingTop: "140px",
-    // display: "fixed",
-    // flexDirection: "column",
-    // justifyContent: "left",
-    // alignItems: "center"}}>
      <div className={navLinks}>
       <Link to="/">Home</Link>
       <Link to="/aboutme">About</Link>
@@ -32,8 +47,12 @@ const Layout = ({ pageTitle, children }) => {
     }}>
       <div style={{
         display: "flex",
+        flexDirection: "row",  // changes direction to row
       }}>
-        <Sidebar />
+        <div>
+          <Socials />
+          <Sidebar />
+        </div>
         <div style={{}}>
           <h1 className={heading}>{pageTitle}</h1>
           {children}
@@ -42,5 +61,7 @@ const Layout = ({ pageTitle, children }) => {
     </div>
   )
 }
+
+
 
 export default Layout
