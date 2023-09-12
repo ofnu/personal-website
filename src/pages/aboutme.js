@@ -6,7 +6,7 @@ import Layout from '../components/layout'
 const AboutMe = () => {
   return (
     <Layout pageTitle="About Me">
-      <p>Hi there! I'm Noah Zoarski, a Purdue University undergraduate in Cybersecurity with a passion for privacy and DIY.
+      <p>Hi there! I'm Noah Zoarski, a Purdue University undergraduate in Cybersecurity with a passion for privacy and transparency.
       </p>
     </Layout>
   )
